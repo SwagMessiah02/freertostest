@@ -49,7 +49,11 @@ pico_enable_stdio_usb(freertostest 1)
 target_include_directories(freertostest PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
 # Add any user requested libraries
-target_link_libraries(freertostest pico_stdlib hardware_gpio pico_multicore FreeRTOS-Kernel FreeRTOS-Kernel-Heap4)
+target_link_libraries(freertostest 
+                    pico_stdlib 
+                    FreeRTOS-Kernel 
+                    FreeRTOS-Kernel-Heap4
+                    )
 
 pico_add_extra_outputs(freertostest)
 
